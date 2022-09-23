@@ -129,19 +129,22 @@ label span:nth-child(3){
 
 .nav-items {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40%;
-    margin-right:40px ;
-    background-color: aqua;
+    width: 50%;
 }
 
 .nav-items a {
-    font-size: 18px;
-    margin-right: 13px;
+    margin-right: 20px;
     text-decoration: none;
     color: var(--color-bg-light);
+    transition: .6s;
+}
 
+.nav-items a:nth-child(1){
+    margin-left: auto;
+}
+
+.nav-items a:nth-child(4){
+    margin-right: 0;
 }
 
 .nav-items a:hover {
@@ -193,6 +196,29 @@ label span:nth-child(3){
 
     .nav-items {
         display: none;
+    }
+    
+}
+
+@media(min-width: 768px) {
+    .nav-items a {
+        font-size: 13px;
+
+    }
+
+    .nav-items {
+        margin-right: 20px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .nav-items a {
+        font-size: 18px;
+
+    }
+
+    .nav-items {
+        margin-right: 50px;
     }
     
 }
