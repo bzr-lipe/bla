@@ -2,10 +2,13 @@
 
 *{
     box-sizing: border-box;
-    margin: 0;
-    border: 0;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
     font-family: 'Raleway', sans-serif;
+    max-width: 100%;
 }
+
 
 :root {
     --color-main: #d9376e;
@@ -16,12 +19,13 @@
 .page{
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
     background-color:var(--color-bg-light) ;
-    
-
+    width: 100%;
 }
 
 .header {
@@ -50,9 +54,6 @@ header {
     color: var(--color-main);
 }
 
-.show576 {
-
-}
 
 .botaohamburger {
     display: none;
@@ -306,26 +307,33 @@ label span:nth-child(3){
       color: var(--color-bg-light);
       width: 80%; 
       align-content: center;
+      
     }
 
   .botoes {
     display: flex;
 
   }
+  
+  .page4 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-bg);
+  }
 
+  .card {
+    border: 2px solid var(--color-main);
+    text-align: center;
+  }
 
+  .card h5 {
+    font-weight: 700;
+  }
 
+  
 
-
-
-
-
-
-
-
-
-
-
+  
 
 @media (max-width: 576px) {
 
@@ -357,7 +365,6 @@ label span:nth-child(3){
         margin-top: 40px;
         padding-bottom:10px ;
         border-bottom:2px solid var(--color-main) ;
-        border-width:%;
     }
 
     #menu a {
@@ -376,7 +383,6 @@ label span:nth-child(3){
    .page1 {
         background-image: url(../images/bg-image1.jpg);
         background-repeat: no-repeat;
-        padding-top: 65px;
     }
 
     #page1 h1 {
@@ -410,10 +416,37 @@ label span:nth-child(3){
         margin-top: 20px;
         font-size: 15px;
     }
+
+    .page4 {
+        padding-top: 0px;
+        background-color: var(--color-bg);
+        height: 224vh;
+    }
+    
+    .cards {
+        justify-content: center;
+        padding-bottom: 30px;
+        margin: 0px auto
+    }
+
+    .card {
+        height: 290px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .cards .card h5 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .page4 h1 {
+        display: none;
+    }
     
 }
 
-@media(min-width: 768px) {
+@media(max-width: 768px) {
     .nav-items a {
         font-size: 13px;
 
@@ -430,10 +463,53 @@ label span:nth-child(3){
         color: var(--color-bg-light);
     }
 
+    .page1 p {
+        margin-bottom: 0px;
+    }
+
     .btn-macrobot {   
         width: 125px;
         margin-top: 120px;
     }
+    
+    .page3 p {
+        text-align: center;
+        margin: 130px auto 0px;
+        font-size: 25px;
+    }
+
+    .botoes {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+     .page4 h1 {
+        display: none;
+    }
+
+    .page4 {
+        height: 100vh;
+    }
+
+    .cards{
+        padding: 0 70px;
+        justify-content: center;
+        margin: auto;
+        background-color: aqua;
+    }
+      
+    .card {
+        width: 250px;
+        height: 220px;
+        margin-bottom: 60px;
+        padding-bottom: 50px;
+        margin:30px;
+        align-items: center;
+    }
+
+    .card-img-top {
+        width: 120px;
+    } 
 }
 
 @media(min-width: 1024px) {
@@ -445,9 +521,56 @@ label span:nth-child(3){
     .nav-items {
         margin-right: 50px;
     }
-    
-    .btn-macrobot {   
-        margin-top: 150px;
+
+    #page1 h1 {
+        font-size: 80px;
+        padding-top: 40px;
+        margin-left: 50px;
+        color: var(--color-bg-light);
+    }
+
+    .page1 p {
+        margin-bottom: 0px;
+    }
+
+    .page3 p {
+        text-align: center;
+        margin: 130px auto 0px;
+        font-size: 25px;
     }
     
+    .btn-macrobot {   
+        width: 125px;
+        margin-top: 150px;
+    }
+
+    .botoes {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .page4 {
+        height: 100vh;
+    }
+
+
+    .cards {
+        margin-left: 5px;
+        justify-content: space-between ;
+        padding: 0 60px;
+    }
+      
+
+    .cards .card {
+        width: 21%;
+    }
+
+    .page4 h1 {
+        color: var(--color-bg-light);
+        margin-left: 60px;
+        font-size: 60px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        display: flex;
+      }
 }
